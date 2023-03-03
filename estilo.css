@@ -29,3 +29,13 @@ footer {
     text-align: center;
     font-style: italic;
 }
+
+@media screen and (max-width: 768px) {
+    body {
+        font: normal 10pt arial;
+    }
+
+    section {
+        width: 90vw;
+    }
+}

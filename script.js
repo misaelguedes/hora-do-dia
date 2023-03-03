@@ -4,7 +4,11 @@ function carregar() {
     var data = new Date()
     var hora = data.getHours()
     var minutos = data.getMinutes()
-    msg.innerHTML = `Agora são ${hora} horas e ${minutos} minutos.`
+    if (minutos == 1) {
+        msg.innerHTML = `Agora são <strong>${hora} horas</strong> e <strong>${minutos} minuto</strong>.`
+    } else {
+        msg.innerHTML = `Agora são <strong>${hora} horas</strong> e <strong>${minutos} minutos</strong>.`
+    }
     if (hora >= 0 && hora < 6) {
         // BOA MADRUGADA!
         img.src = 'madrugada.png'

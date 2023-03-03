@@ -4,7 +4,9 @@ function carregar() {
     var data = new Date()
     var hora = data.getHours()
     var minutos = data.getMinutes()
-    if (minutos == 1) {
+    if (minutos == 0){
+        msg.innerHTML = `Agora são <strong>${hora} horas</strong>.`
+    } else if (minutos == 1) {
         msg.innerHTML = `Agora são <strong>${hora} horas</strong> e <strong>${minutos} minuto</strong>.`
     } else {
         msg.innerHTML = `Agora são <strong>${hora} horas</strong> e <strong>${minutos} minutos</strong>.`

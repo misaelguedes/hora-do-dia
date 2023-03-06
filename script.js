@@ -4,9 +4,15 @@ function carregar() {
     var data = new Date()
     var hora = data.getHours()
     var minutos = data.getMinutes()
-    if (minutos == 0){
+    if (hora == 1 && minutos == 0){
+        msg.innerHTML = `Agora é <strong>${hora} hora</strong>.`
+    } else if (hora == 1 && minutos == 1) {
+        msg.innerHTML = `Agora são <strong>${hora} hora</strong> e <strong>${minutos} minuto</strong>.`
+    } else if (hora == 1 && minutos > 1) {
+        msg.innerHTML = `Agora são <strong>${hora} hora</strong> e <strong>${minutos} minutos</strong>.`
+    } else if (hora > 1 && minutos == 0) {
         msg.innerHTML = `Agora são <strong>${hora} horas</strong>.`
-    } else if (minutos == 1) {
+    } else if (hora > 1 && minutos == 1) {
         msg.innerHTML = `Agora são <strong>${hora} horas</strong> e <strong>${minutos} minuto</strong>.`
     } else {
         msg.innerHTML = `Agora são <strong>${hora} horas</strong> e <strong>${minutos} minutos</strong>.`
@@ -19,9 +25,13 @@ function carregar() {
         // BOM DIA!
         img.src = 'manha.png'
         document.body.style.background = '#ECDDBA'
-    } else if (hora >= 12 && hora < 18) {
+    } else if (hora >= 12 && hora < 17) {
         // BOA TARDE!
         img.src = 'tarde.png'
+        document.body.style.background = '#C1CEDF'
+    } else if (hora >= 17 && hora < 18) {
+        // BOM FIM DE TARDE!
+        img.src = 'tarde2.png'
         document.body.style.background = '#F69960'
     } else {
         // BOA NOITE!

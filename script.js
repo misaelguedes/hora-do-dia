@@ -4,7 +4,11 @@ function carregar() {
     var data = new Date()
     var hora = data.getHours()
     var minutos = data.getMinutes()
-    if (hora == 1 && minutos == 0){
+    if (hora == 0 && minutos == 0) {
+        msg.innerHTML = `Agora são <strong>${hora} horas</strong>.`
+    } else if (hora == 0 && minutos == 1) {
+        msg.innerHTML = `Agora são <strong>${hora} horas</strong> e <strong>${minutos} minuto</strong>.`
+    } else if (hora == 1 && minutos == 0){
         msg.innerHTML = `Agora é <strong>${hora} hora</strong>.`
     } else if (hora == 1 && minutos == 1) {
         msg.innerHTML = `Agora são <strong>${hora} hora</strong> e <strong>${minutos} minuto</strong>.`
